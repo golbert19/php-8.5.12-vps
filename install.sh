@@ -56,8 +56,7 @@ install_debian_ubuntu() {
     php${TARGET_VERSION}-mbstring \
     php${TARGET_VERSION}-zip \
     php${TARGET_VERSION}-bcmath \
-    php${TARGET_VERSION}-intl \
-    php${TARGET_VERSION}-opcache
+    (php${TARGET_VERSION}-intl)
 
   echo "[3/4] Estableciendo PHP ${TARGET_VERSION} como versión predeterminada en CLI..."
   update-alternatives --set php /usr/bin/php${TARGET_VERSION} || true

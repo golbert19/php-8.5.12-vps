@@ -56,7 +56,7 @@ install_debian_ubuntu() {
     php${TARGET_VERSION}-mbstring \
     php${TARGET_VERSION}-zip \
     php${TARGET_VERSION}-bcmath \
-    (php${TARGET_VERSION}-intl)
+    php${TARGET_VERSION}-intl
 
   echo "[3/4] Estableciendo PHP ${TARGET_VERSION} como versión predeterminada en CLI..."
   update-alternatives --set php /usr/bin/php${TARGET_VERSION} || true
@@ -79,7 +79,7 @@ install_rhel_alma_rocky() {
 
   echo "[3/4] Instalando PHP ${EXPECTED_PATCH} y extensiones..."
   dnf update -y
-  dnf install -y php php-cli php-fpm php-common php-mysqlnd php-xml php-curl php-gd php-mbstring php-zip php-bcmath php-intl php-opcache
+  dnf install -y php php-cli php-fpm php-common php-mysqlnd php-xml php-curl php-gd php-mbstring php-zip php-bcmath php-intl
 
   echo "[4/4] Reiniciando servicio PHP-FPM..."
   systemctl enable php-fpm
